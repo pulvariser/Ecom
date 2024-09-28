@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="./admin.js"></script>
+</head>
+<body>
+    <div class="bg-gray-200 min-h-screen py-16">
+        <div class="bg-white w-10/12 mx-auto shadow-lg">
+            <header 
+                class="h-[200px] flex items-center justify-center"
+                style="background-image: linear-gradient( 179.7deg,  rgba(249,21,215,1) 1.1%, rgba(22,0,98,1) 99% );"
+            >
+                <h1 class="text-white font-bold text-4xl">Admin Console</h1>
+            </header>
+            <div class="p-8">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-2">
+                        <img src="/images/logo.png" class="w-12" />
+                        <h1 class="text-2xl font-bold">Ecom</h1>
+                    </div>
+
+                    <div class="flex gap-8">
+                        <button onclick="onTap('products')">Products</button>
+                        <button onclick="onTap('customers')">Customers</button>
+                        <button onclick="onTap('orders')">Orders</button>
+                        <button onclick="onTap('payments')">Payments</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-8 pb-8">
+                <!--Customers-->
+                <div id="customers" class="hidden tab-data animate__animated animate__fadeIn">
+                    <div class="flex items-center gap-8">
+                        <div class="border-b flex-grow"></div>
+                        <h1 class="text-lg font-semibold">Customer</h1>
+                        <div class="border-b flex-grow"></div>
+                    </div>
+                    <div class="my-8">
+                        <table class="w-full">
+                            <tr 
+                                class="text-left border-b"
+                            >
+                                <th class="py-4 pl-4">Customer`s Name</th>
+                                <th class="py-4">Email</th>
+                                <th class="py-4">Mobile</th>
+                                <th class="py-4">Address</th>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+                <!--Products-->
+                <div class="tab-data animate__animated animate__fadeIn" id="products">
+                    <div class="flex items-center gap-8">
+                        <div class="border-b flex-grow"></div>
+                        <h1 class="text-lg font-semibold">Products</h1>
+                        <div class="border-b flex-grow"></div>
+                    </div>
+                    <button class="bg-violet-600 text-white py-2 px-6 rounded">
+                        <i class="ri-function-add-line"></i>
+                        Add New Product
+                    </button>
+                    <div class="grid md:grid-cols-4 my-8 gap-16">
+                        <div class="shadow-lg bg-white">
+                            <img class="w-full" src="/images/products/a.jpg" />
+                            <div class="p-4">
+                                <label class="text-sm text-gray-600 mb-1">May 16, 2024 10:00 Am</label>
+                                <h1 class="text-lg font-semibold">Men`s Blue New Shirt</h1>
+                                <button class="font-bold text-rose-600 text-sm">Luis Philips</button>
+                                <div class="flex gap-2 mt-1">
+                                    <h1 class="text-md font-bold">₹999</h1>
+                                    <del>₹2,000</del>
+                                    <label class="text-gray-600">(50% OFF)</label>
+                                </div>
+                                <div class="flex items-center gap-3 mt-3">
+                                    <button class="bg-indigo-100 w-8 h-8 text-indigo-600 rounded-full hover:bg-indigo-600 hover:text-white">
+                                        <i class="ri-edit-box-line"></i>
+                                    </button>
+
+                                    <button class="bg-rose-100 w-8 h-8 text-rose-600 rounded-full hover:bg-rose-600 hover:text-white">
+                                        <i class="ri-delete-bin-3-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-lg bg-white">
+                            <img class="w-full" src="/images/products/b.jpg" />
+                            <div class="p-4">
+                                <label class="text-sm text-gray-600 mb-1">May 16, 2024 10:00 Am</label>
+                                <h1 class="text-lg font-semibold">Men`s Blue New Shirt</h1>
+                                <button class="font-bold text-rose-600 text-sm">Luis Philips</button>
+                                <div class="flex gap-2 mt-1">
+                                    <h1 class="text-md font-bold">₹999</h1>
+                                    <del>₹2,000</del>
+                                    <label class="text-gray-600">(50% OFF)</label>
+                                </div>
+                                <div class="flex items-center gap-3 mt-3">
+                                    <button class="bg-indigo-100 w-8 h-8 text-indigo-600 rounded-full hover:bg-indigo-600 hover:text-white">
+                                        <i class="ri-edit-box-line"></i>
+                                    </button>
+
+                                    <button class="bg-rose-100 w-8 h-8 text-rose-600 rounded-full hover:bg-rose-600 hover:text-white">
+                                        <i class="ri-delete-bin-3-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-lg bg-white">
+                            <img class="w-full" src="/images/products/c.jpg" />
+                            <div class="p-4">
+                                <label class="text-sm text-gray-600 mb-1">May 16, 2024 10:00 Am</label>
+                                <h1 class="text-lg font-semibold">Men`s Blue New Shirt</h1>
+                                <button class="font-bold text-rose-600 text-sm">Luis Philips</button>
+                                <div class="flex gap-2 mt-1">
+                                    <h1 class="text-md font-bold">₹999</h1>
+                                    <del>₹2,000</del>
+                                    <label class="text-gray-600">(50% OFF)</label>
+                                </div>
+                                <div class="flex items-center gap-3 mt-3">
+                                    <button class="bg-indigo-100 w-8 h-8 text-indigo-600 rounded-full hover:bg-indigo-600 hover:text-white">
+                                        <i class="ri-edit-box-line"></i>
+                                    </button>
+
+                                    <button class="bg-rose-100 w-8 h-8 text-rose-600 rounded-full hover:bg-rose-600 hover:text-white">
+                                        <i class="ri-delete-bin-3-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-lg bg-white">
+                            <img class="w-full" src="/images/products/d.jpg" />
+                            <div class="p-4">
+                                <label class="text-sm text-gray-600 mb-1">May 16, 2024 10:00 Am</label>
+                                <h1 class="text-lg font-semibold">Men`s Blue New Shirt</h1>
+                                <button class="font-bold text-rose-600 text-sm">Luis Philips</button>
+                                <div class="flex gap-2 mt-1">
+                                    <h1 class="text-md font-bold">₹999</h1>
+                                    <del>₹2,000</del>
+                                    <label class="text-gray-600">(50% OFF)</label>
+                                </div>
+                                <div class="flex items-center gap-3 mt-3">
+                                    <button class="bg-indigo-100 w-8 h-8 text-indigo-600 rounded-full hover:bg-indigo-600 hover:text-white">
+                                        <i class="ri-edit-box-line"></i>
+                                    </button>
+
+                                    <button class="bg-rose-100 w-8 h-8 text-rose-600 rounded-full hover:bg-rose-600 hover:text-white">
+                                        <i class="ri-delete-bin-3-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Orders-->
+                <div class="hidden tab-data animate__animated animate__fadeIn" id="orders">
+                    <div class="flex items-center gap-8">
+                        <div class="border-b flex-grow"></div>
+                        <h1 class="text-lg font-semibold">Orders</h1>
+                        <div class="border-b flex-grow"></div>
+                    </div>
+                    <div class="my-8">
+                        <table class="w-full">
+                            <tr 
+                                class="text-left border-b"
+                            >
+                                <th class="py-4 pl-4">Customer`s Name</th>
+                                <th class="py-4">Email</th>
+                                <th class="py-4">Mobile</th>
+                                <th class="py-4">Address</th>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!--Payments-->
+                <div class="hidden tab-data animate__animated animate__fadeIn" id="payments">
+                    <div class="flex items-center gap-8">
+                        <div class="border-b flex-grow"></div>
+                        <h1 class="text-lg font-semibold">Payments</h1>
+                        <div class="border-b flex-grow"></div>
+                    </div>
+                    <div class="my-8">
+                        <table class="w-full">
+                            <tr 
+                                class="text-left border-b"
+                            >
+                                <th class="py-4 pl-4">Customer`s Name</th>
+                                <th class="py-4">Email</th>
+                                <th class="py-4">Mobile</th>
+                                <th class="py-4">Address</th>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-3 pl-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="/images/pic.jpg" class="w-12 h-12 rounded-full" />
+                                        <div class="flex flex-col">
+                                            <h1 class="font-semibold">Er Saurav</h1>
+                                            <small class="text-gray-600">May 21, 2024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>example@mail.com</td>
+                                <td>+910123456789</td>
+                                <td>Electronic city, Phase-2, Bengaluru, Karnatka 560100</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
